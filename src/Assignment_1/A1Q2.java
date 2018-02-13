@@ -16,7 +16,7 @@ import java.awt.Color;
  * @author camet2651
  */
 
-public class A1Q1 {
+public class A1Q2 {
 
     /**
      * @param args the command line arguments
@@ -29,23 +29,36 @@ public class A1Q1 {
         //create wallS
         new Wall(nyc, 1, 1, Direction.WEST); 
         new Wall(nyc, 1, 2, Direction.EAST); 
-        new Wall(nyc, 2, 2, Direction.EAST); 
         new Wall(nyc, 2, 1, Direction.WEST); 
         new Wall(nyc, 1, 1, Direction.NORTH);
         new Wall(nyc, 1, 2, Direction.NORTH);
-        new Wall(nyc, 2, 2, Direction.SOUTH);
+        new Wall(nyc, 1, 2, Direction.SOUTH);
         new Wall(nyc, 2, 1, Direction.SOUTH);
        //Put a robot in nyc
-        RobotSE srbw = new RobotSE(nyc, 0, 2, Direction.WEST);
-       //Move Robot around wall
-        srbw.move(2);
-        srbw.turnLeft();
-        srbw.move(3);
-        srbw.turnLeft();
-        srbw.move(3);
-        srbw.turnLeft();
-        srbw.move(3);
+        RobotSE srbw = new RobotSE(nyc, 1, 2, Direction.SOUTH);
+       
+        //put newspaper down
+        new Thing(nyc , 2, 2); 
+        
+        //srbw goes to newspaper
+        srbw.turnRight();
+        srbw.move(1);
         srbw.turnLeft();
         srbw.move(1);
+        srbw.turnLeft();
+        srbw.move(1);
+       
+        //srbw picks up news paper
+        srbw.pickThing();
+        
+        //srbw returns to bed
+         srbw.turnLeft(2);
+        srbw.move(1);
+        srbw.turnRight();
+        srbw.move(1);
+        srbw.turnRight();
+        srbw.move(1);
+        srbw.turnRight();
+       
           }
 }

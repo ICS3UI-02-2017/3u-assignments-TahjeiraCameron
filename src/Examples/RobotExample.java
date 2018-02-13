@@ -40,8 +40,8 @@ public class RobotExample {
         srbw.setColor(Color.MAGENTA);
         green.setColor(Color.GREEN);
         
-         //Put a th on srbw
-        srbw.setLabel("th");
+         //Put a name on srbw
+        srbw.setLabel("call me a diva");
         
         //move the robot forward one space
         srbw.move();
@@ -51,7 +51,7 @@ public class RobotExample {
         
         //turn the robot to the right
         srbw.turnRight();
-        
+         
         //move robot n nuber of spaces
         srbw.move(2);
  
