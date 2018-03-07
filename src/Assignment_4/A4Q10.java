@@ -142,7 +142,7 @@ public class A4Q10 extends javax.swing.JFrame {
         double cNum = Double.parseDouble(cText);
        
         //find number in celsius
-       double fFinal =  cNum * 9/5 + 32 ;
+       double fFinal =  cNum * 9.0/5.0 + 32 ;
        
         //tell user answer
         fTextField.setText("" + Math.round(fFinal));
